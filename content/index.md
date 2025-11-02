@@ -1,7 +1,5 @@
 ---
-title: Welcome to Quartz
+title: personal
 ---
-this is sena personal website  
-helo  
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+
+im trying everything to be productive
