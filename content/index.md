@@ -1,6 +1,14 @@
 ---
 title: personal
+banner: "![[inline-header.jpg]]"
 ---
+
+
+
+# books
+
+![[Books.base]]
+
 
 im trying everything to be productive
 
@@ -12,3 +20,4 @@ todo list of the month (November, 2025)
 - project: kindle progress read
 - project: beautify the sena's wiki website
 - learning: (nightly) aws learning
+

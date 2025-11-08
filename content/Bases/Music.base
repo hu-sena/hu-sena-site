@@ -1,0 +1,70 @@
+filters:
+  and:
+    - categories.contains(link("Music"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Album
+  note.artist:
+    displayName: Artist
+  note.releaseYear:
+    displayName: Year
+  note.trackCount:
+    displayName: Tracks
+  note.duration:
+    displayName: Duration
+  note.spotifyUrl:
+    displayName: Spotify
+  note.cover:
+    displayName: Cover
+views:
+  - type: table
+    name: All Albums
+    order:
+      - file.name
+      - artist
+      - releaseYear
+      - trackCount
+      - duration
+    sort:
+      - property: releaseYear
+        direction: DESC
+      - property: artist
+        direction: ASC
+    columnSize:
+      file.name: 220
+      note.artist: 180
+      note.releaseYear: 80
+      note.trackCount: 80
+      note.duration: 110
+  - type: table
+    name: Recent
+    filters:
+      and:
+        - note.releaseYear >= 2020
+    sort:
+      - property: releaseYear
+        direction: DESC
+    limit: 20
+  - type: table
+    name: Artist
+    filters:
+      and:
+        - list(artist).contains(this)
+    order:
+      - file.name
+      - releaseYear
+      - trackCount
+      - duration
+    sort:
+      - property: releaseYear
+        direction: DESC
+  - type: cards
+    name: Gallery
+    order:
+      - file.name
+      - artist
+      - releaseYear
+    image: note.cover
+    imageAspectRatio: 1
+    cardSize: 170

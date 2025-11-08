@@ -12,6 +12,14 @@ properties:
   note.genre:
     displayName: Genre
 views:
+  - type: cards
+    name: Gallery
+    order:
+      - file.name
+      - author
+    image: note.cover
+    cardSize: 190
+    imageAspectRatio: 1.5
   - type: table
     name: Books
     order:
@@ -55,8 +63,3 @@ views:
       - file.name
       - year
       - genre
-  - type: cards
-    name: Gallery
-    image: note.cover
-    cardSize: 170
-    imageAspectRatio: 1.5
